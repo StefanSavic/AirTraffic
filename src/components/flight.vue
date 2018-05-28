@@ -1,14 +1,17 @@
 <template>
   <div>
     <h1>FLIGHT</h1>
-    <ul>
-      <li>From:{{ $route.params.from }}</li>
-      <li>To:{{ $route.params.to }}</li>
-      <li>Manufacturer:{{ $route.params.man }}</li>
-      <li>Model:{{ $route.params.mod }} </li>
-      <li>AirLine:{{ $route.params.op }}</li>
-      <img :src="imgPreUrl + manFl" :alt="$route.params.op">
-    </ul>
+    <div class="flightCard">
+      <ul>
+        <li>From:{{ $route.params.from }}</li>
+        <li>To:{{ $route.params.to }}</li>
+        <li>Manufacturer:{{ $route.params.man }}</li>
+        <li>Model:{{ $route.params.mod }} </li>
+        <li><img :title="$route.params.op" :src="imgPreUrl + manFl" :alt="$route.params.op"></li>
+        <!--<img :src="imgPreUrl + manFl" :alt="$route.params.op">-->
+      </ul>
+
+    </div>
 
   </div>
 
@@ -38,5 +41,7 @@
 </script>
 
 <style scoped>
-
+img{
+  max-width: 100px;
+}
 </style>
